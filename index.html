@@ -5,36 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hay'Cheat</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        var ip = '';
-fetch('https://api.ipify.org/?format=json')
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    ip = data.ip;
-    var currentDate = new Date();
-    var formattedDate = currentDate.toLocaleDateString();
-    var formattedTime = currentDate.toLocaleTimeString();
-    var webhook = 'https://discord.com/api/webhooks/1136728937737769045/Yc6wTSqANXsJiZDmcd1dcK_m6ToF9ccPGDrYAUTaxiz4TAyJ40ehrRhZ3cXIkhbL8dk1';
-    var message = {
-        content: '> **Nouvelle connexion de l\'IP:** '+ip+'\n> **Le: **'+formattedDate+' **à:**'+formattedTime+'\n> © Hayzi'
-    };
-
-    fetch(webhook, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(message)
-    });
-});
-    </script>
 </head>
 <body>
     <div>
         <h1>Hay'Cheat</h1>
     </div><hr style="text-align: center;width: 50%;"><br><br>
-    
+
+    <h3>Puissance = P = W</h3>
+    <h3>Intensité = I = A</h3>
+    <h3>Tension = U = V</h3>
+    <h3>Energie = E = Wh ou J</h3>
+    <h3>Capacité = Q = Ah ou C</h3>
+    <h3>Temps = t = h</h3>
+    <h3>Résistance = R = Ohms</h3>
+
+    <h3>Instalations en série : Volt multiplié</h3>
+    <h3>Instalations en parallele : Ampères heure multiplié</h3>
+
+    <h3>Puissance : P = E/t = U x I</h3>
+    <h3>Energie : E = P x t = Q x U = U x I x t</h3>
+    <h3>Capacité Energétique : Q = I x t</h3>
 </body>
 </html>
