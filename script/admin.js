@@ -8,7 +8,7 @@ function checkCode() {
     const userInput = document.getElementById('userInput').value;
     const resultDiv = document.getElementById('result');
     if (userInput == currentCode) {
-        window.location.href = "https://h4yzi.github.io/Hayzi/";
+        window.location.href = "webhook.html";
     } else {
         resultDiv.innerHTML = '<span style="color: red;">NON</span>';
     }

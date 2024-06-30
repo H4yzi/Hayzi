@@ -35,3 +35,13 @@ body {
 .boutons .login {
     margin-top: 35px;
 }
+
+.adminmenu {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.webhook {
+    margin-top: 5%;
+    text-align: center;
+}
